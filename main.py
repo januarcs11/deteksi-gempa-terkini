@@ -36,6 +36,7 @@ def tampilkan_data(result):
     print(f"keterangan: {result['keterangan']}")
 
 
+
 if __name__ == '__main__':
     print('Applikasi Utama')
     result = ekstraksi_data()
