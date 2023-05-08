@@ -3,14 +3,15 @@ Applikasi Deteksi Gempa terkini
 """
 from datetime import datetime
 
-import gempaterkini
-from gempaterkini import ekstraksi_data, tampilkan_data
+from gempaterkini import GempaTerkini
+
 
 today = datetime.now()
 
 if __name__ == '__main__':
-    print(f'Info Gempa terkini {gempaterkini.description}')
     print('Applikasi Utama')
     print(f'Current Time: {today}')
-    result = ekstraksi_data()
-    tampilkan_data(result)
+    gempa_di_indonesia = GempaTerkini('https://www.bmkg.go.id')
+    gempa_di_indonesia.run()
+
+
